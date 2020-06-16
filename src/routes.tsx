@@ -12,6 +12,11 @@ export const singleLibraryRoutes = [
     exact: true
   },
   {
+    path: "/:collection/:library/book/:bookUrl",
+    component: BookDetails,
+    exact: true
+  },
+  {
     // this is the old path that is now "/loans", which makes more sense
     // we need to redirect, otherwise we will call setCollectionAndBook
     // with collectionUrl = loans, which will result in a 401.
