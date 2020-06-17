@@ -1,11 +1,17 @@
 import * as React from "react";
 import BookDetails from "./components/bookDetails";
+import Reader from "./components/reader";
 import Collection from "./components/Collection";
 import MyBooks from "./components/MyBooks";
 import { Redirect, RouteComponentProps } from "react-router-dom";
 import NoMatch from "./components/404";
 
 export const singleLibraryRoutes = [
+  {
+    path: "/:collection/:library/read/:bookUrl",
+    component: Reader,
+    exact: true
+  },
   {
     path: "/book/:bookUrl",
     component: BookDetails,
@@ -16,6 +22,7 @@ export const singleLibraryRoutes = [
     component: BookDetails,
     exact: true
   },
+
   {
     // this is the old path that is now "/loans", which makes more sense
     // we need to redirect, otherwise we will call setCollectionAndBook
