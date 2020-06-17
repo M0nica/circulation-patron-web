@@ -104,6 +104,7 @@
     "isomorphic-fetch": "^2.2.1",
     "jsdom": "^16.2.1",
     "lodash": "^4.17.15",
+    "library-simplified-webpub-viewer": "https://github.com/NYPL-Simplified/webpub-viewer#NOREF_convert_to_es6",
     "moment": "^2.24.0",
     "opds-feed-parser": "0.0.16",
     "opds-web-client": "^0.4.2",

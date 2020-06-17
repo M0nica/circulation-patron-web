@@ -20,8 +20,10 @@ export default function useComplaints(book: BookData) {
   const [state, dispatch] = React.useReducer(complaints, initState);
   const dialog = useDialogState();
 
-  const reportUrl = getReportUrl(book.raw);
-
+  // TODO - make this optional
+  const reportUrl =
+    "http://simplye-dev-cm.amigos.org/xyzlib/works/URI/https://standardebooks.org/ebooks/edith-wharton/the-age-of-innocence/report"; //getReportUrl(book.raw);
+  // console.log("the report url is", reportUrl);
   // when the hook mounts, fetch the complaint types
   React.useEffect(() => {
     fetchComplaintTypes(dispatch)(reportUrl);

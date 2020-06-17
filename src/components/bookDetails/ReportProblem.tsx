@@ -17,7 +17,10 @@ const getDisplayType = (type: string) =>
     .replace("http://librarysimplified.org/terms/problem/", "")
     .replace(/-/g, " ")
     .split(" ")
-    .map(t => t[0].toUpperCase() + t.slice(1))
+    .map(t => {
+      /* need to fail elegantly for improper error handling*/
+      return t[0].toUpperCase() + t.slice(1);
+    })
     .join(" ");
 
 type ComplaintFormData = Required<ComplaintData>;
